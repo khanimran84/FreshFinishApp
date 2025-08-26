@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Customer Dashboard - FreshFinish</title>
+    <link rel="stylesheet" th:href="@{/css/dashboard.css}">
+</head>
+<body>
+    <div class="dashboard">
+        <h1>Welcome, <span th:text="${username}"></span> 👋</h1>
+        <h2>Customer Dashboard</h2>
+        
+        <ul>
+            <li><a href="#">Book a Car Wash</a></li>
+            <li><a href="#">My Bookings</a></li>
+            <li><a href="#">Rewards</a></li>
+            <li><a href="#">Profile</a></li>
+        </ul>
+    </div>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Admin Dashboard - FreshFinish</title>
+    <link rel="stylesheet" th:href="@{/css/dashboard.css}">
+</head>
+<body>
+    <div class="dashboard">
+        <h1>Admin Panel 🔧</h1>
+        <h2>Welcome, <span th:text="${username}"></span></h2>
+
+        <ul>
+            <li><a href="#">Manage Users</a></li>
+            <li><a href="#">Manage Partners</a></li>
+            <li><a href="#">Bookings Overview</a></li>
+            <li><a href="#">Analytics</a></li>
+        </ul>
+    </div>
+</body>
+</html>

@@ -24,11 +24,21 @@ public class SignUpController {
     
     @PostMapping("/signup")
     public String save_user(@ModelAttribute User user) {
-    	
-    	userRepository.save(user);
-		return "redirect:/signup?success";
-    	
+
+        // Only allow CUSTOMER or SELLER roles
+        if (user.getRole() == null || user.getRole().isEmpty()) {
+            user.setRole("CUSTOMER"); // default
+        } else if (!user.getRole().equalsIgnoreCase("CUSTOMER") &&
+                   !user.getRole().equalsIgnoreCase("SELLER")) {
+            user.setRole("CUSTOMER"); // fallback
+        }
+
+        // Save user
+        userRepository.save(user);
+
+        return "redirect:/signup?success";
     }
+
     
     
 }
