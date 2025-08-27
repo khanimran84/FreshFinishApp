@@ -2,19 +2,33 @@
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>Customer Dashboard - FreshFinish</title>
-    <link rel="stylesheet" th:href="@{/css/dashboard.css}">
+   <link rel="stylesheet" th:href="@{/css/dashboard.css}">
 </head>
 <body>
-    <div class="dashboard">
-        <h1>Welcome, <span th:text="${username}"></span> 👋</h1>
-        <h2>Customer Dashboard</h2>
-        
+
+    <!-- Navbar -->
+    <div class="navbar">
+        <div class="logo">🚗 FRESH FINISH</div>
         <ul>
-            <li><a href="#">Book a Car Wash</a></li>
-            <li><a href="#">My Bookings</a></li>
-            <li><a href="#">Rewards</a></li>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Book Wash</a></li>
+            <li><a href="#">Offers</a></li>
             <li><a href="#">Profile</a></li>
         </ul>
     </div>
+
+    <!-- Hero Section -->
+    <div class="hero">
+        <div class="hero-text">
+            <h1>Book Car Wash at Your Doorstep</h1>
+            <p>Book a car wash easily and get service at your doorstep.</p>
+            <button>Book Now</button>
+        </div>
+        <div class="hero-img">
+            <img src="https://cdn-icons-png.flaticon.com/512/743/743007.png" alt="Car Wash">
+        </div>
+    </div>
+
 </body>
 </html>
